@@ -43,6 +43,24 @@
   When libcurl saves a cookiejar, it creates a file header of its own in which
   there is a URL mention that will link to the web version of this document.
 
+## Cookie file format
+
+  The cookie file format is text based and stores one cookie per line. Lines
+  that start with `#` are treated as comments.
+
+  Each line that each specifies a single cookie consists of seven text fields
+  separated with TAB characters.
+
+  | Field | Example     | Meaning                                       |
+  |-------|-------------|-----------------------------------------------|
+  | 0     | example.com | Domain name                                   |
+  | 1     | FALSE       | Include subdomains boolean                    |
+  | 2     | /foobar/    | Path                                          |
+  | 3     | TRUE        | Set over a secure transport                   |
+  | 4     | 1462299217  | Expires at – seconds since Jan 1st 1970, or 0 |
+  | 5     | person      | Name of the cookie                            |
+  | 6     | daniel      | Value of the cookie                           |
+
 ## Cookies with curl the command line tool
 
   curl has a full cookie "engine" built in. If you just activate it, you can
