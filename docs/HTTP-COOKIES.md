@@ -56,7 +56,7 @@
   | 0     | example.com | Domain name                                   |
   | 1     | FALSE       | Include subdomains boolean                    |
   | 2     | /foobar/    | Path                                          |
-  | 3     | TRUE        | Set over a secure transport                   |
+  | 3     | TRUE        | Set over HTTPS                                |
   | 4     | 1462299217  | Expires at – seconds since Jan 1st 1970, or 0 |
   | 5     | person      | Name of the cookie                            |
   | 6     | daniel      | Value of the cookie                           |
